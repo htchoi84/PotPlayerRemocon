@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_background">
+
+        <!-- 첫번째 행 -->
+        <RelativeLayout
+            android:id="@+id/rl_row_1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/power_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/power_btn_select" />
+        </RelativeLayout>
+
+        <!-- 두번째 행 -->
+        <LinearLayout
+            android:id="@+id/rl_row_2_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_row_1_layout"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <ImageButton
+                android:id="@+id/up_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/up_btn_select"
+                android:soundEffectsEnabled="false" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+        </LinearLayout>
+
+        <!-- 3번째 행 -->
+        <LinearLayout
+            android:id="@+id/rl_row_3_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_row_2_layout"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <ImageButton
+                android:id="@+id/left_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/left_btn_select" />
+
+            <ImageButton
+                android:id="@+id/ok_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ok_btn_select" />
+
+            <ImageButton
+                android:id="@+id/right_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/right_btn_select" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+        </LinearLayout>
+
+        <!-- 4번째 행 -->
+        <LinearLayout
+            android:id="@+id/rl_row_4_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_row_3_layout"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <ImageButton
+                android:id="@+id/down_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/down_btn_select"
+                android:soundEffectsEnabled="false" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#ffffff" />
+        </LinearLayout>
+
+        <!-- 5번째 행 -->
+        <LinearLayout
+            android:id="@+id/rl_row_5_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rl_row_4_layout"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/tab_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/tab_btn_select" />
+
+            <ImageButton
+                android:id="@+id/open_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/open_btn_select" />
+
+            <ImageButton
+                android:id="@+id/mute_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/mute_btn_select" />
+
+            <ImageButton
+                android:id="@+id/cancel_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/cancel_btn_select" />
+        </LinearLayout>
+
+        <!-- 6번째 행 -->
+        <LinearLayout
+            android:id="@+id/rl_row_6_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rl_row_5_layout"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/rw_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rw_btn_select" />
+
+            <ImageButton
+                android:id="@+id/play_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/play_btn_select" />
+
+            <ImageButton
+                android:id="@+id/stop_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/stop_btn_select" />
+
+            <ImageButton
+                android:id="@+id/ff_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ff_btn_select" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

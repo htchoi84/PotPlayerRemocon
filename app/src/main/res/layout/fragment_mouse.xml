@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mouse_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/ll_sensitivity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensitivity"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/Sensitivity_seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dsb_min="0"
+                app:dsb_max="6" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_sensitivity_layout">
+
+        <View
+            android:id="@+id/touchpad_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="touchpad_main_click"
+            android:background="@drawable/btn_background"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/touch_icon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/btn_keyboard"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/keyboard_btn_selector"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <!-- 구분 선 -->
+   <!-- <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_weight="0"
+        android:background="#000000"
+        android:layout_above="@+id/ll_button_layout"/>  -->
+
+    <LinearLayout
+        android:id="@+id/ll_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/touchpad_left_button"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="45"
+            android:background="@drawable/btn_background_selector"
+            android:text="L"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/mouse_wheel_view"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="10"
+            android:background="@drawable/btn_background_selector" />
+
+        <Button
+            android:id="@+id/touchpad_right_button"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="45"
+            android:background="@drawable/btn_background_selector"
+            android:text="R"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</RelativeLayout>

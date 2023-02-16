@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/slide_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/Begin_Slide_Button"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background_selector"
+            android:text="슬라이드 시작 \n-첫 페이지" />   <!-- 버튼 사운드 없앰 -->
+
+        <Button
+            android:id="@+id/Current_Slide_Button"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="슬라이드 시작 \n-현재 페이지"
+            android:background="@drawable/btn_background_selector" />
+
+        <Button
+            android:id="@+id/End_Slide_Button"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="슬라이드 종료"
+            android:background="@drawable/btn_background_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/arrow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/slide_layout">
+
+        <Button
+            android:id="@+id/before_page_Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/before_btn_select" />
+
+        <!-- 더미 뷰 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/next_page_Button"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/next_btn_select" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_keyboard"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/keyboard_btn_selector"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="135dp"
+        android:layout_marginRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensitivity"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/Sensitivity_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dsb_min="0"
+            app:dsb_max="6" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/mouse_left_btn"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_selector"
+                android:text="L"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/sensor_mouse_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/pointer_normal" />
+
+            <Button
+                android:id="@+id/mouse_right_btn"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_selector"
+                android:text="R"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
